@@ -1,13 +1,26 @@
 ﻿using System;
 
-int[] Array = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Inserisci il numero di numeri che vuoi inserire:");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[] Array = new int[n];
+
+Console.WriteLine("Inserisci " + n + " numeri:");
+
+for (int i = 0; i < n; i++)
+{
+    Array[i] = Convert.ToInt32(Console.ReadLine());
+}
+//int[] Array = { 2, 6, 7, 5, 3, 9 };
 printArray(Array);
 int[] squaredArray = RaiseToSquare(Array);
 printArray(squaredArray);
-int somma = ArraySum(Array);
-Console.WriteLine("La somma totale degli elementi dell'array è: " + somma);
+int sum = ArraySum(Array);
+Console.WriteLine("La somma dell'array è: " + sum);
 int sumSquare = ArraySum(squaredArray);
-Console.WriteLine("La somma totale degli elementi dell'array è: " + sumSquare);
+Console.WriteLine("La somma dell'array elevato al quadrato è: " + sumSquare);
+
+
 
 
 void printArray(int[] array)
