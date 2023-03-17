@@ -61,7 +61,7 @@ int[] RaiseToSquare(int[] array)
 
     for (int i = 0; i < squaredArray.Length; i++)
     {
-        squaredArray[i] = squaredArray[i] * squaredArray[i];
+        squaredArray[i] = square(squaredArray[i]);
     }
 
     return squaredArray;
